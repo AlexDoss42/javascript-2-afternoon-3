@@ -133,7 +133,7 @@ function uniq(arr, cb){
   for(var i = 0; i < arr.length; i++){
     for(var j = arr.length-1; j >= 0; j--){
       if(i !== j && arr[i] === arr[j]){
-      arr.splice(i, 1)
+      arr.splice(j, 1)
       }
     }
   }
@@ -179,6 +179,14 @@ each(names, function(item, indice){
 */
 
 // Code here
+
+function getUserById (arr, id, cb){
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].id = id){
+      cb(arr[i])
+    }
+  }
+}
 
 // Do not edit the code below.
 var users = [
